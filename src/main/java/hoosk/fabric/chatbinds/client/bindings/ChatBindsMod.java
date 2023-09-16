@@ -1,4 +1,4 @@
-package hoosk.fabric.chatbinds;
+package hoosk.fabric.chatbinds.client.bindings;
 
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.option.KeyBinding;

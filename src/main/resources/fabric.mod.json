@@ -3,18 +3,18 @@
   "id": "chatbinds",
   "version": "${version}",
   "name": "chatbinds",
-  "description": "",
-  "authors": [],
+  "description": "A simple chatbind mod, simply use the command /chatbind",
+  "authors": [
+    "Juskie"
+  ],
   "contact": {
+    "website": "https://subwoofer-hoosk.com",
     "repo": "https://github.com/Casey/chatbinds"
   },
   "license": "All-Rights-Reserved",
   "icon": "assets/chatbinds/icon.png",
   "environment": "client",
   "entrypoints": {
-    "client": [
-      "hoosk.fabric.chatbinds.client.ChatbindsClient"
-    ],
     "main": [
       "hoosk.fabric.chatbinds.Chatbinds"
     ]
