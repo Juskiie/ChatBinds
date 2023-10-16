@@ -51,16 +51,11 @@ public class Chatbinds implements ModInitializer {
                     String keyName = keyBinding.getTranslationKey().replace("key.chatbinds.", "");
                     String message = ChatBindsStorage.getBindMessage(keyBinding);
 
-                    // DEBUG: Print to console the detected key and associated message
-                    System.out.println("Detected key press: " + keyName + ". Message: " + message);
-
                     if (!message.isEmpty() && client.player != null && System.currentTimeMillis() - LAST_CHAT_BIND_USED > COOLDOWN_DURATION) {
                         System.out.println(message);
                         if(message.startsWith("/")) {
-                            // client.player.sendMessage(Text.translatable("chat.run.command", message), false);
                             client.player.networkHandler.sendChatCommand(message.replaceFirst("/", ""));
                         } else {
-                            // client.player.sendMessage(Text.translatable("chat.run.message", message), false);
                             client.player.networkHandler.sendChatMessage(message);
                         }
                     }
